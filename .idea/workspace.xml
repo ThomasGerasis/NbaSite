@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b56633a-b24c-45bd-87f2-afb8798e8ca2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/side-news.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/side-news.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/templates/homepage-template.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/templates/homepage-template.php" afterDir="false" />
     </list>
@@ -66,7 +65,7 @@
       <workItem from="1564729080045" duration="24669000" />
       <workItem from="1564988488317" duration="2891000" />
       <workItem from="1564991941237" duration="1025000" />
-      <workItem from="1564992983702" duration="16484000" />
+      <workItem from="1564992983702" duration="22579000" />
     </task>
     <servers />
   </component>

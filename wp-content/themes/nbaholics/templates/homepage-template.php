@@ -92,7 +92,6 @@
     </div>
         <div class="col-lg-4 pt-1 border">
             <?php get_sidebar("right")?>
-
         </div>
 
 </div>

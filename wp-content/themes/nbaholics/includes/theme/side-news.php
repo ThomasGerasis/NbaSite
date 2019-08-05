@@ -47,20 +47,6 @@ class Category_Posts extends WP_Widget
         $second_cat_id   = $instance['second_cat_id'];
         $third_cat_id   = $instance['third_cat_id'];
 
-        ?>
-
-        <div class="bg-secondary d-flex w-100 flex-column align-items-sm-center flex-md-row justify-content-center
-             order-0 pt-0">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" class="btn" href="#Category1">ΡΟΗ</a></li>
-                    <li><a data-toggle="tab" class="btn" href="#Category2">LATEST</a></li>
-                    <li><a data-toggle="tab" class="btn" href="#Category3">ΕΙΔΗΣΕΙΣ</a></li>
-                </ul>
-            </div>
-
-        <div class="tab-content>
-        <?php
-
         /**
          * Filter the arguments for the Category Posts widget.
          *
@@ -69,26 +55,36 @@ class Category_Posts extends WP_Widget
             'posts_per_page'    => 5,
             'cat'               => $first_cat_id,
         ];
-        $q1= new WP_Query( apply_filters( 'category_posts_args', $first_cat_id ) );
+        $q1 = new WP_Query( apply_filters( 'category_posts_args', $first_cat_id ) );
+
         $query_args = [
             'posts_per_page'    => 5,
             'cat'               => $second_cat_id,
         ];
-        $q2 = new WP_Query( apply_filters( 'category_posts_args', $query_args ) );
+        $q2 = new WP_Query( apply_filters( 'category_posts_args', $second_cat_id ) );
+
             $query_args = [
                 'posts_per_page'    => 5,
                 'cat'               => $third_cat_id,
             ];
-        $q3 = new WP_Query( apply_filters( 'category_posts_args', $query_args ) );
+        $q3 = new WP_Query( apply_filters( 'category_posts_args', $third_cat_id ) );
 
-
+        ?>
+        <div class="accordion" id="ChangeCategory">
+            <div class="bg-secondary d-flex w-100 flex-column align-items-sm-center flex-md-row justify-content-center
+             order-0 pt-0">
+                <button class="btn" data-toggle="collapse" data-target="#Collapse1" aria-expanded="false" aria-controls="Collapse1">ΡΟΗ</button>
+                <button class="btn" data-toggle="collapse" data-target="#Collapse2" aria-expanded="false" aria-controls="Collapse2">BLogs and Bets</button>
+                <button class="btn" data-toggle="collapse" data-target="#Collapse3" aria-expanded="false" aria-controls="Collapse3">ΕΙΔΗΣΕΙΣ</button>
+            </div>
+          <div class="collapse show" id="Collapse1" data-parent="#ChangeCategory">
+        <?php
         if( $q1->have_posts() ) {
-
-?>
-            <?php
             while( $q1->have_posts() ) {
-                $q1->the_post(); ?>
-                    <div id="Category1" class="tab-pane fade in active">
+                $q1->the_post();
+
+                ?>
+
                 <div class="d-flex flex-column align-items-sm-center flex-md-row">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="p-2 bd-highlight">
@@ -100,60 +96,61 @@ class Category_Posts extends WP_Widget
                         <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
                         <p class="text-muted"><?php the_excerpt(); ?></p>
                     </div>
-                </div>
                     </div>
                 <?php
-            }
-
-            wp_reset_postdata();
-        }
-        ?>
-        <?php
-        if( $q2->have_posts() ) {
-            while( $q2->have_posts() ) {
-                $q2->the_post(); ?>
-              <div id="Category2" class="tab-pane fade in active">
-                <div class="d-flex flex-column align-items-sm-center flex-md-row">
-                    <?php if ( has_post_thumbnail() ) : ?>
-                        <div class="p-2 bd-highlight">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid img-hover') ); ?>
-                        </div>
-                    <?php endif; ?>
-                    <div class="p-2 bd-highlight">
-                        <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                        <p class="text-muted"><?php the_excerpt(); ?></p>
-                    </div>
-                </div>
-            <?php
-            }
-            wp_reset_postdata();
-        }
-        ?>
-            <?php
-        if( $q3->have_posts() ) {
-            while( $q3->have_posts() ) {
-                $q3->the_post(); ?>
-              <div id="Category3" class="tab-pane fade in active">
-                <div class="d-flex flex-column align-items-sm-center flex-md-row">
-                    <?php if ( has_post_thumbnail() ) : ?>
-                        <div class="p-2 bd-highlight">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid img-hover') ); ?>
-                        </div>
-                    <?php endif; ?>
-                    <div class="p-2 bd-highlight">
-                        <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                        <p class="text-muted"><?php the_excerpt(); ?></p>
-                    </div>
-                </div>
-            <?php
             }
             wp_reset_postdata();
         }
         ?>
           </div>
+           <div class="collapse" id="Collapse2" data-parent="#ChangeCategory">
           <?php
+        if( $q2->have_posts() ) {
+            while( $q2->have_posts() ) {
+                $q2->the_post(); ?>
+                <div class="d-flex flex-column align-items-sm-center flex-md-row">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <div class="p-2 bd-highlight">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid img-hover') ); ?>
+                        </div>
+                    <?php endif; ?>
+                    <div class="p-2 bd-highlight">
+                        <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                        <p class="text-muted"><?php the_excerpt(); ?></p>
+                    </div>
+                    </div>
+            <?php
+            }
+            wp_reset_postdata();
+        }
+         ?>
+          </div>
+           <div class="collapse" id="Collapse3" data-parent="#ChangeCategory">
+          <?php
+        if( $q3->have_posts() ) {
+            while( $q3->have_posts() ) {
+                $q3->the_post(); ?>
+                <div class="d-flex flex-column align-items-sm-center flex-md-row">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <div class="p-2 bd-highlight">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid img-hover') ); ?>
+                        </div>
+                    <?php endif; ?>
+                    <div class="p-2 bd-highlight">
+                        <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                        <p class="text-muted"><?php the_excerpt(); ?></p>
+                    </div>
+                </div>
+            <?php
+            }
+            wp_reset_postdata();
+        }
+?>
+        </div>
+        </div>
+        <?php
         echo $args['after_widget'];
 
         if ( ! $this->is_preview() ) {
@@ -188,7 +185,6 @@ class Category_Posts extends WP_Widget
     public function form( $instance )
     {
         $title             = isset($instance['title'])? $instance['title'] : false;
-        $number            = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
         $first_cat_id      = isset( $instance['first_cat_id'] ) ? absint( $instance['first_cat_id'] ) : 1;
         $second_cat_id     = isset( $instance['second_cat_id'] ) ? absint( $instance['second_cat_id'] ) : 1;
         $third_cat_id      = isset( $instance['third_cat_id'] ) ? absint( $instance['third_cat_id'] ) : 1;
@@ -254,3 +250,4 @@ add_action( 'widgets_init', function ()
 {
     register_widget( 'Category_Posts' );
 });
+
