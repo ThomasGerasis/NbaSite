@@ -13,24 +13,26 @@
         <div class="col-lg-8 pt-1">
             <div id="HomeSlider" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators" >
-                <?php
-                $slider_data = get_post_meta($post->ID, '_full_meta',false);
-                $counter_indi==0;
-                $slider_indicators='';
-                 foreach($slider_data[0]['sliders'] as $data) {
-                     if($counter_indi==0) {
-                         $slider_indicators .= '<li data-target="#HomeSlider" data-slide-to="0" class="active"></li>';
-                     }else{
-                         $slider_indicators .= '<li data-target="#HomeSlider" data-slide-to="' . $counter_indi . '"></li>';
-                     }
-                     $counter_indi++;
-                }
-                 echo $slider_indicators;
-                 ?>
-                 </ol>
+                    <?php
+                    $slider_data = get_post_meta($post->ID, '_full_meta',false);
+                    $counter_indi=0;
+                    $slider_indicators='';
+                    foreach($slider_data[0]['sliders'] as $data) {
+                        if($counter_indi==0) {
+                            $slider_indicators .= '<li data-target="#HomeSlider" data-slide-to="0" class="active"></li>';
+                        }else{
+                            $slider_indicators .= '<li data-target="#HomeSlider" data-slide-to="' . $counter_indi . '"></li>';
+                        }
+                        $counter_indi++;
+                    }
+                    echo $slider_indicators;
+                    ?>
+                </ol>
+                <div class="carousel-inner">
                 <?php
                 $slider_data = get_post_meta($post->ID, '_full_meta',false);
                 $slidernba = '';
+                $counter=0;
                  foreach($slider_data[0]['sliders'] as $data) {
                      $src='';
                      if (!empty ($data['icon'])){
@@ -40,17 +42,17 @@
                      }
                      $permalink = get_permalink($data['Hot_posts']);
                      $slider_class=$counter==0?'active':'';
-                     $slidernba.= '<div class="carousel-inner">';
+
                      $slidernba.= '<div class="carousel-item '.$slider_class.'">';
                      $slidernba.= '<a href="'.$permalink.'">';
                      $slidernba.= '<img class="d-block w-100" src="'.$src.'" alt="" style="height: 300px; width: 700px;">';
                      $slidernba.= '</a>';
                      $slidernba.= '</div>';
-                     $slidernba.= '</div>';
                      $counter++;
                  }
                 echo $slidernba;
                 ?>
+                </div>
             </div>
             <div class="pt-5">
                 <h2>Todays Nba News</h2>

@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b56633a-b24c-45bd-87f2-afb8798e8ca2" name="Default Changelist" comment="" />
+    <list default="true" id="6b56633a-b24c-45bd-87f2-afb8798e8ca2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/side-news.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/side-news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/templates/homepage-template.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/templates/homepage-template.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +20,13 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1OgOpf16nfjLC1pEMI287rzOZXB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/sass.cmd" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
@@ -54,11 +66,22 @@
       <workItem from="1564729080045" duration="24669000" />
       <workItem from="1564988488317" duration="2891000" />
       <workItem from="1564991941237" duration="1025000" />
-      <workItem from="1564992983702" duration="12045000" />
+      <workItem from="1564992983702" duration="16484000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

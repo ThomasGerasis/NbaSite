@@ -3,10 +3,14 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.min.js" />
+        <item url="file://$PROJECT_DIR$/wp-content/themes/nbaholics/includes/plugins/slick/slick.min.js" />
+        <item url="file://$PROJECT_DIR$/wp-content/themes/nbaholics/includes/plugins/slick/slick.min.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.min.js" />
+      <root url="file://$PROJECT_DIR$/wp-content/themes/nbaholics/includes/plugins/slick/slick.min.js" />
+      <root url="file://$PROJECT_DIR$/wp-content/themes/nbaholics/includes/plugins/slick/slick.min.min.js" />
     </CLASSES>
     <SOURCES />
   </library>

@@ -43,60 +43,52 @@ class Category_Posts extends WP_Widget
         $title          = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Category Posts' );
         /** This filter is documented in wp-includes/default-widgets.php */
         $title          = apply_filters( 'widget_title', $title, $instance, $this->id_base );
-        $number         = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
-        if ( ! $number ) {
-            $number = 5;
-        }
-
         $first_cat_id   = $instance['first_cat_id'];
         $second_cat_id   = $instance['second_cat_id'];
         $third_cat_id   = $instance['third_cat_id'];
+
+        ?>
+
+        <div class="bg-secondary d-flex w-100 flex-column align-items-sm-center flex-md-row justify-content-center
+             order-0 pt-0">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" class="btn" href="#Category1">ΡΟΗ</a></li>
+                    <li><a data-toggle="tab" class="btn" href="#Category2">LATEST</a></li>
+                    <li><a data-toggle="tab" class="btn" href="#Category3">ΕΙΔΗΣΕΙΣ</a></li>
+                </ul>
+            </div>
+
+        <div class="tab-content>
+        <?php
 
         /**
          * Filter the arguments for the Category Posts widget.
          *
          */
+        $query_args = [
+            'posts_per_page'    => 5,
+            'cat'               => $first_cat_id,
+        ];
+        $q1= new WP_Query( apply_filters( 'category_posts_args', $first_cat_id ) );
+        $query_args = [
+            'posts_per_page'    => 5,
+            'cat'               => $second_cat_id,
+        ];
+        $q2 = new WP_Query( apply_filters( 'category_posts_args', $query_args ) );
             $query_args = [
-                'posts_per_page'    => $number,
-                'cat'               => $first_cat_id,$second_cat_id,$third_cat_id,
+                'posts_per_page'    => 5,
+                'cat'               => $third_cat_id,
             ];
-        $q = new WP_Query( apply_filters( 'category_posts_args', $query_args ) );
+        $q3 = new WP_Query( apply_filters( 'category_posts_args', $query_args ) );
 
-        if( $q->have_posts() ) {
 
-            echo $args['before_widget'];
-            if ( $title ) {
-                //echo $args['before_title'] . $title . $args['after_title'];
-            }
+        if( $q1->have_posts() ) {
+
 ?>
-            <div class="bg-secondary d-flex w-100 flex-column align-items-sm-center flex-md-row justify-content-center
-             order-0 pt-0">
-                <ul class="nav nav-pills">
-                    <li class="active"><a data-toggle="pill" class="btn" href="#Category1">ΡΟΗ</a></li>
-                    <li><a data-toggle="pill" class="btn" href="#Category2">LATEST</a></li>
-                    <li><a data-toggle="pill" class="btn" href="#Category3">ΕΙΔΗΣΕΙΣ</a></li>
-                </ul>
-
-                <div class="tab-content">
-                    <div id="Category1" class="tab-pane fade in active">
-                        <h3>HOME</h3>
-                        <p>Some content.</p>
-                    </div>
-                    <div id="Category2" class="tab-pane fade">
-                        <h3>Menu 1</h3>
-                        <p>Some content in menu 1.</p>
-                    </div>
-                    <div id="Category3" class="tab-pane fade">
-                        <h3>Menu 2</h3>
-                        <p>Some content in menu 2.</p>
-                    </div>
-                </div>
-            </div>
-
             <?php
-            while( $q->have_posts() ) {
-                $q->the_post(); ?>
-
+            while( $q1->have_posts() ) {
+                $q1->the_post(); ?>
+                    <div id="Category1" class="tab-pane fade in active">
                 <div class="d-flex flex-column align-items-sm-center flex-md-row">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="p-2 bd-highlight">
@@ -109,12 +101,59 @@ class Category_Posts extends WP_Widget
                         <p class="text-muted"><?php the_excerpt(); ?></p>
                     </div>
                 </div>
-
+                    </div>
                 <?php
             }
 
             wp_reset_postdata();
         }
+        ?>
+        <?php
+        if( $q2->have_posts() ) {
+            while( $q2->have_posts() ) {
+                $q2->the_post(); ?>
+              <div id="Category2" class="tab-pane fade in active">
+                <div class="d-flex flex-column align-items-sm-center flex-md-row">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <div class="p-2 bd-highlight">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid img-hover') ); ?>
+                        </div>
+                    <?php endif; ?>
+                    <div class="p-2 bd-highlight">
+                        <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                        <p class="text-muted"><?php the_excerpt(); ?></p>
+                    </div>
+                </div>
+            <?php
+            }
+            wp_reset_postdata();
+        }
+        ?>
+            <?php
+        if( $q3->have_posts() ) {
+            while( $q3->have_posts() ) {
+                $q3->the_post(); ?>
+              <div id="Category3" class="tab-pane fade in active">
+                <div class="d-flex flex-column align-items-sm-center flex-md-row">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <div class="p-2 bd-highlight">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid img-hover') ); ?>
+                        </div>
+                    <?php endif; ?>
+                    <div class="p-2 bd-highlight">
+                        <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                        <p class="text-muted"><?php the_excerpt(); ?></p>
+                    </div>
+                </div>
+            <?php
+            }
+            wp_reset_postdata();
+        }
+        ?>
+          </div>
+          <?php
         echo $args['after_widget'];
 
         if ( ! $this->is_preview() ) {
@@ -129,7 +168,6 @@ class Category_Posts extends WP_Widget
     {
         $instance                   = $old_instance;
         $instance['title']          = strip_tags( $new_instance['title'] );
-        $instance['number']         = (int) $new_instance['number'];
         $instance['first_cat_id']   = (int) $new_instance['first_cat_id'];
         $instance['second_cat_id']  = (int) $new_instance['second_cat_id'];
         $instance['third_cat_id']   = (int) $new_instance['third_cat_id'];
@@ -207,12 +245,6 @@ class Category_Posts extends WP_Widget
                 ?>
             </select>
         </p>
-
-        <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
-            <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
-        </p>
-
         <?php
     }
 
