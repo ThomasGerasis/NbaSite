@@ -1,156 +1,59 @@
-<div id="teamnavcont" class="clearfix">
+<div class="top-content p-3">
     <div class="container">
-        <ul id="teamnav" class="d-flex flex-wrap">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/1-atl-hawks.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/2-bos-celtics.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/3-cha-hornets.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/4-chi-bulls.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/5-cle-cavs.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/6-dallas-mavs.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/7-den-nuggets.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/8-det-pistons.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/9-golden-state.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/10-houston-rockets.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/11-indiana-pacers.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/12-la-clippers.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/13-la-lakers.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/14-memphis-grizzli.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/15-miami-heat.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/16-milwaukee-bucks.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/17-min-wolves.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/19-new-orleans-pel.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/20-ny-knicks.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/21-orlando-magic.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/22-phi-sixers.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/23-phx-suns.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/24-por-blazers.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/25-sac-kings.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/26-san-antonio-spu.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/28-toronto-raptors.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/29-utah-jazz.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/30-was-wizards.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/33-okc-thunder.png">
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/38-brooklyn-nets.png">
-                </a>
-            </li>
-        </ul>
+        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/76ers.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/hawks.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/dallas.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/heat.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/utah.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/magic.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/rockets.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/wakee.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/lakers.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/raptors.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/pistons.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/hornets.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/knicks.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/kings.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/images/cavs.png" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                <i class="fa fa-arrow-circle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+             <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
     </div>
 </div>

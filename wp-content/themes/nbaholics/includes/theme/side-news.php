@@ -53,38 +53,49 @@ class Category_Posts extends WP_Widget
          */
         $query_args = [
             'posts_per_page'    => 5,
+            'fields'            =>'ids',
             'cat'               => $first_cat_id,
         ];
-        $q1 = new WP_Query( apply_filters( 'category_posts_args', $first_cat_id ) );
+        $q1 = new WP_Query( apply_filters( 'category_posts_args', $query_args ) );
 
         $query_args = [
             'posts_per_page'    => 5,
+            'fields'            =>'ids',
             'cat'               => $second_cat_id,
         ];
-        $q2 = new WP_Query( apply_filters( 'category_posts_args', $second_cat_id ) );
+        $q2 = new WP_Query( apply_filters( 'category_posts_args', $query_args ) );
 
             $query_args = [
                 'posts_per_page'    => 5,
+                'fields'            =>'ids',
                 'cat'               => $third_cat_id,
             ];
-        $q3 = new WP_Query( apply_filters( 'category_posts_args', $third_cat_id ) );
+        $q3 = new WP_Query( apply_filters( 'category_posts_args', $query_args ) );
 
         ?>
-        <div class="accordion" id="ChangeCategory">
-            <div class="bg-secondary d-flex w-100 flex-column align-items-sm-center flex-md-row justify-content-center
+
+           <div class="bg-secondary d-flex w-100 flex-column align-items-sm-center flex-md-row justify-content-center
              order-0 pt-0">
-                <button class="btn" data-toggle="collapse" data-target="#Collapse1" aria-expanded="false" aria-controls="Collapse1">ΡΟΗ</button>
-                <button class="btn" data-toggle="collapse" data-target="#Collapse2" aria-expanded="false" aria-controls="Collapse2">BLogs and Bets</button>
-                <button class="btn" data-toggle="collapse" data-target="#Collapse3" aria-expanded="false" aria-controls="Collapse3">ΕΙΔΗΣΕΙΣ</button>
-            </div>
-          <div class="collapse show" id="Collapse1" data-parent="#ChangeCategory">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="btn pills text-uppercase font-weight-bold active" id="pills-first-tab" data-toggle="pill" href="#pills-First" role="tab" aria-controls="pills-First" aria-selected="true">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn pills text-uppercase font-weight-bold" id="pills-second-tab" data-toggle="pill" href="#pills-Second" role="tab" aria-controls="pills-Second" aria-selected="false">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn pills text-uppercase font-weight-bold" id="pills-third-tab" data-toggle="pill" href="#pills-Third" role="tab" aria-controls="pills-Third" aria-selected="false">Contact</a>
+          </li>
+           </ul>
+           </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-First" role="tabpanel" aria-labelledby="pills-first-tab">
         <?php
         if( $q1->have_posts() ) {
             while( $q1->have_posts() ) {
                 $q1->the_post();
 
                 ?>
-
                 <div class="d-flex flex-column align-items-sm-center flex-md-row">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="p-2 bd-highlight">
@@ -103,7 +114,7 @@ class Category_Posts extends WP_Widget
         }
         ?>
           </div>
-           <div class="collapse" id="Collapse2" data-parent="#ChangeCategory">
+           <div class="tab-pane fade" id="pills-Second" role="tabpanel" aria-labelledby="pills-second-tab">
           <?php
         if( $q2->have_posts() ) {
             while( $q2->have_posts() ) {
@@ -126,7 +137,7 @@ class Category_Posts extends WP_Widget
         }
          ?>
           </div>
-           <div class="collapse" id="Collapse3" data-parent="#ChangeCategory">
+          <div class="tab-pane fade" id="pills-Third" role="tabpanel" aria-labelledby="pills-third-tab">
           <?php
         if( $q3->have_posts() ) {
             while( $q3->have_posts() ) {
@@ -148,8 +159,7 @@ class Category_Posts extends WP_Widget
             wp_reset_postdata();
         }
 ?>
-        </div>
-        </div>
+           </div>
         <?php
         echo $args['after_widget'];
 
