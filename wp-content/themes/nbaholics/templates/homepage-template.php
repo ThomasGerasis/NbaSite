@@ -66,15 +66,15 @@
                                     <?php if ( has_post_thumbnail() ) : ?>
                                 <?php $feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
 
-                                    <div class="p-2 bd-highlight posts-back w-25">
+                                    <div class="p-2 bd-highlight posts-back w-30">
                                         <a href="<?php the_permalink(); ?>">
-                                  <?php the_post_thumbnail( 'thumb-400', array( 'class' => 'img-fluid img-hover')); ?>
+                                  <?php the_post_thumbnail( 'thumb-255', array( 'class' => 'img-fluid img-hover')); ?>
                                         </a>
                                         </div>
                                     <?php endif; ?>
-                                    <div class="p-2 bd-highlight">
+                                    <div class="p-2 bd-highlight w-70">
                                         <p class=""></p>
-                                        <p class=""><a class="btn font-weight-bold" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                                        <p class=""><a class="text-decoration-none text-widget font-weight-bold font-italic" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
                                         <div class="text-muted">
                                             <p><a href="<?php the_author_link(); ?>"</p> <?php the_author();?></a>
                                             / <?php the_date( 'M j' ); ?> / <?php $commentscount = get_comments_number();

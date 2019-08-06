@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6b56633a-b24c-45bd-87f2-afb8798e8ca2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/images.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/images.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/side-news.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/side-news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/templates/homepage-template.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/templates/homepage-template.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +70,7 @@
       <workItem from="1564991941237" duration="1025000" />
       <workItem from="1564992983702" duration="22895000" />
       <workItem from="1565075138160" duration="13543000" />
-      <workItem from="1565089269996" duration="10749000" />
+      <workItem from="1565089269996" duration="13107000" />
     </task>
     <servers />
   </component>

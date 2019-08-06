@@ -10,7 +10,7 @@
  * WordPress will create a copy of the post image with the specified
  * dimensions when uploading a new image
  */
-function bh_theme_images() {
+function nba_theme_images() {
 
 	// Enables post-thumbnail support for the theme
 	add_theme_support( 'post-thumbnails' );
@@ -27,7 +27,7 @@ function bh_theme_images() {
 
 }
 
-add_action( 'after_setup_theme', 'bh_theme_images' );
+add_action( 'after_setup_theme', 'nba_theme_images' );
 
 //instert Custom sized image into post using Media Gallery for Slider
 

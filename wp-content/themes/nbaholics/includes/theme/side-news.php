@@ -99,16 +99,16 @@ class Category_Posts extends WP_Widget
                 $q1->the_post();
 
                 ?>
-                <div class="d-flex flex-column align-items-sm-center flex-md-row">
+                <div class="d-flex flex-column  flex-md-row">
                     <?php if ( has_post_thumbnail() ) : ?>
-                        <div class="p-2 bd-highlight">
+                        <div class="p-2 bd-highlight w-50">
                             <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid img-hover') ); ?>
+                                <?php the_post_thumbnail( 'thumb-120', array( 'class' => 'img-fluid img-hover') ); ?>
+                                </a>
                         </div>
                     <?php endif; ?>
-                    <div class="p-2 bd-highlight">
-                        <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                        <p class="text-muted"><?php the_excerpt(); ?></p>
+                    <div class="p-2 bd-highlight w-50">
+                        <p class=""><a class="font-weight-bold font-italic text-widget text-decoration-none" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
                     </div>
                     </div>
                 <?php
@@ -122,16 +122,16 @@ class Category_Posts extends WP_Widget
         if( $q2->have_posts() ) {
             while( $q2->have_posts() ) {
                 $q2->the_post(); ?>
-                <div class="d-flex flex-column align-items-sm-center flex-md-row">
+              <div class="d-flex flex-column align-items-sm-center flex-md-row">
                     <?php if ( has_post_thumbnail() ) : ?>
-                        <div class="p-2 bd-highlight">
+                        <div class="p-2 bd-highlight w-50">
                             <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid img-hover') ); ?>
+                                <?php the_post_thumbnail( 'thumb-120', array( 'class' => 'img-fluid img-hover') ); ?>
+                                </a>
                         </div>
                     <?php endif; ?>
-                    <div class="p-2 bd-highlight">
-                        <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                        <p class="text-muted"><?php the_excerpt(); ?></p>
+                    <div class="p-2 bd-highlight w-50">
+                        <p class=""><a class="font-weight-bold font-italic text-widget text-decoration-none" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
                     </div>
                     </div>
             <?php
@@ -145,24 +145,25 @@ class Category_Posts extends WP_Widget
         if( $q3->have_posts() ) {
             while( $q3->have_posts() ) {
                 $q3->the_post(); ?>
-                <div class="d-flex flex-column align-items-sm-center flex-md-row">
+             <div class="d-flex flex-column align-items-sm-center flex-md-row">
                     <?php if ( has_post_thumbnail() ) : ?>
-                        <div class="p-2 bd-highlight">
+                        <div class="p-2 bd-highlight w-50">
                             <a href="<?php the_permalink(); ?>">
-                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-fluid img-hover') ); ?>
+                                <?php the_post_thumbnail( 'thumb-120', array( 'class' => 'img-fluid img-hover') ); ?>
+                               </a>
                         </div>
                     <?php endif; ?>
-                    <div class="p-2 bd-highlight">
-                        <p class=""><a class="text-muted btn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                        <p class="text-muted"><?php the_excerpt(); ?></p>
+                    <div class="p-2 bd-highlight w-50">
+                        <p class=""><a class="font-weight-bold font-italic text-widget text-decoration-none" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
                     </div>
-                </div>
+                    </div>
             <?php
             }
             wp_reset_postdata();
         }
 ?>
            </div>
+
         <?php
         echo $args['after_widget'];
 
