@@ -43,6 +43,9 @@ class Category_Posts extends WP_Widget
         $title          = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Category Posts' );
         /** This filter is documented in wp-includes/default-widgets.php */
         $title          = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+        $First_title    =$instance['First_title'];
+        $Second_title    =$instance['Second_title'];
+        $Third_title    =$instance['Third_title'];
         $first_cat_id   = $instance['first_cat_id'];
         $second_cat_id   = $instance['second_cat_id'];
         $third_cat_id   = $instance['third_cat_id'];
@@ -78,13 +81,13 @@ class Category_Posts extends WP_Widget
              order-0 pt-0">
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item">
-            <a class="btn pills text-uppercase font-weight-bold active" id="pills-first-tab" data-toggle="pill" href="#pills-First" role="tab" aria-controls="pills-First" aria-selected="true">Home</a>
+            <a class="btn pills text-uppercase font-weight-bold active" id="pills-first-tab" data-toggle="pill" href="#pills-First" role="tab" aria-controls="pills-First" aria-selected="true"><?php echo $First_title; ?></a>
           </li>
           <li class="nav-item">
-            <a class="btn pills text-uppercase font-weight-bold" id="pills-second-tab" data-toggle="pill" href="#pills-Second" role="tab" aria-controls="pills-Second" aria-selected="false">Profile</a>
+            <a class="btn pills text-uppercase font-weight-bold" id="pills-second-tab" data-toggle="pill" href="#pills-Second" role="tab" aria-controls="pills-Second" aria-selected="false"><?php echo $Second_title; ?></a>
           </li>
           <li class="nav-item">
-            <a class="btn pills text-uppercase font-weight-bold" id="pills-third-tab" data-toggle="pill" href="#pills-Third" role="tab" aria-controls="pills-Third" aria-selected="false">Contact</a>
+            <a class="btn pills text-uppercase font-weight-bold" id="pills-third-tab" data-toggle="pill" href="#pills-Third" role="tab" aria-controls="pills-Third" aria-selected="false"><?php echo $Third_title; ?></a>
           </li>
            </ul>
            </div>
@@ -174,7 +177,9 @@ class Category_Posts extends WP_Widget
     public function update( $new_instance, $old_instance )
     {
         $instance                   = $old_instance;
-        $instance['title']          = strip_tags( $new_instance['title'] );
+        $instance['First_title']    = strip_tags( $new_instance['First_title'] );
+        $instance['Second_title']   = strip_tags( $new_instance['Second_title'] );
+        $instance['Third_title']    = strip_tags( $new_instance['Third_title'] );
         $instance['first_cat_id']   = (int) $new_instance['first_cat_id'];
         $instance['second_cat_id']  = (int) $new_instance['second_cat_id'];
         $instance['third_cat_id']   = (int) $new_instance['third_cat_id'];
@@ -194,17 +199,19 @@ class Category_Posts extends WP_Widget
 
     public function form( $instance )
     {
-        $title             = isset($instance['title'])? $instance['title'] : false;
+        $First_title       = isset($instance['First_title'])? $instance['First_title'] : false;
+        $Second_title      = isset($instance['Second_title'])? $instance['Second_title'] : false;
+        $Third_title       = isset($instance['Third_title'])? $instance['Third_title'] : false;
         $first_cat_id      = isset( $instance['first_cat_id'] ) ? absint( $instance['first_cat_id'] ) : 1;
         $second_cat_id     = isset( $instance['second_cat_id'] ) ? absint( $instance['second_cat_id'] ) : 1;
         $third_cat_id      = isset( $instance['third_cat_id'] ) ? absint( $instance['third_cat_id'] ) : 1;
         ?>
-        <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Enter a title:' )?></label>
-            <input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>"/>
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id('first_cat_id'); ?>"><?php _e( 'First Category Name:' )?></label>
+              <p>
+             <label for="<?php echo $this->get_field_id('First_title'); ?>"><?php _e( 'Enter a title:' )?></label>
+            <input id="<?php echo $this->get_field_id( 'First_title' ); ?>" name="<?php echo $this->get_field_name( 'First_title' ); ?>" type="text" value="<?php echo $First_title; ?>"/>
+            </p>
+            <p>
+            <label for="<?php echo $this->get_field_id('first_cat_id'); ?>"><?php _e( 'Choose Category:' )?></label>
             <select id="<?php echo $this->get_field_id('first_cat_id'); ?>" name="<?php echo $this->get_field_name('first_cat_id'); ?>">
                 <?php
                 $this->categories = get_categories();
@@ -219,8 +226,12 @@ class Category_Posts extends WP_Widget
                 ?>
             </select>
         </p>
+           <p>
+             <label for="<?php echo $this->get_field_id('Second_title'); ?>"><?php _e( 'Enter a title:' )?></label>
+            <input id="<?php echo $this->get_field_id( 'Second_title' ); ?>" name="<?php echo $this->get_field_name( 'Second_title' ); ?>" type="text" value="<?php echo $Second_title; ?>"/>
+            </p>
         <p>
-            <label for="<?php echo $this->get_field_id('second_cat_id'); ?>"><?php _e( 'Second Category Name:' )?></label>
+            <label for="<?php echo $this->get_field_id('second_cat_id'); ?>"><?php _e( 'Choose Category :' )?></label>
             <select id="<?php echo $this->get_field_id('second_cat_id'); ?>" name="<?php echo $this->get_field_name('second_cat_id'); ?>">
                 <?php
                 $this->categories = get_categories();
@@ -235,8 +246,12 @@ class Category_Posts extends WP_Widget
                 ?>
             </select>
         </p>
+           <p>
+             <label for="<?php echo $this->get_field_id('Third_title'); ?>"><?php _e( 'Enter a title:' )?></label>
+            <input id="<?php echo $this->get_field_id( 'Third_title' ); ?>" name="<?php echo $this->get_field_name( 'Third_title' ); ?>" type="text" value="<?php echo $Third_title; ?>"/>
+            </p>
         <p>
-            <label for="<?php echo $this->get_field_id('third_cat_id'); ?>"><?php _e( 'Third Category Name:' )?></label>
+            <label for="<?php echo $this->get_field_id('third_cat_id'); ?>"><?php _e( 'Choose Category:' )?></label>
             <select id="<?php echo $this->get_field_id('third_cat_id'); ?>" name="<?php echo $this->get_field_name('third_cat_id'); ?>">
                 <?php
                 $this->categories = get_categories();

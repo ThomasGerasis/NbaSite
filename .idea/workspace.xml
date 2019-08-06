@@ -3,49 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b56633a-b24c-45bd-87f2-afb8798e8ca2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/1-atl-hawks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/10-houston-rockets.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/11-indiana-pacers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/12-la-clippers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/13-la-lakers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/14-memphis-grizzli.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/15-miami-heat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/16-milwaukee-bucks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/17-min-wolves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/19-new-orleans-pel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/2-bos-celtics.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/20-ny-knicks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/21-orlando-magic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/22-phi-sixers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/23-phx-suns.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/24-por-blazers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/25-sac-kings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/26-san-antonio-spu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/28-toronto-raptors.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/29-utah-jazz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/3-cha-hornets.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/30-was-wizards.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/33-okc-thunder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/38-brooklyn-nets.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/4-chi-bulls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/5-cle-cavs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/6-dallas-mavs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/7-den-nuggets.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/8-det-pistons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/9-golden-state.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/NBA-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/js/scripts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/assets/styles/core.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/assets.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/assets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/player-news.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/metaboxes/player-news.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/side-news.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/includes/theme/side-news.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/nbaholics/menus/teamsmenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/nbaholics/menus/teamsmenu.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +65,7 @@
       <workItem from="1564991941237" duration="1025000" />
       <workItem from="1564992983702" duration="22895000" />
       <workItem from="1565075138160" duration="13543000" />
-      <workItem from="1565089269996" duration="8761000" />
+      <workItem from="1565089269996" duration="10749000" />
     </task>
     <servers />
   </component>
